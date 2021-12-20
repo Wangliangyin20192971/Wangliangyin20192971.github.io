@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>馨草单词</title>
+	<link rel="icon" href="pic.ico">
+	<style type="text/css">
+		@font-face {
+			font-family: 'ciclefina';
+			src: url('images/cicle-webfont.woff2') format('woff2'),
+			url('images/cicle-webfont.woff') format('woff'),
+			url('images/ciclefina-webfont.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		@font-face {
+			font-family: 'zantroke';
+			src: url('images/zantroke-webfont.woff2') format('woff2'),
+			url('images/zantroke-webfont.woff') format('woff'),
+			url('images/zantroke-webfont.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+		body{
+			margin: 0 auto;
+		}
+		header{
+			font-family: 'zantroke';
+			height: 150px;
+			background: url(head.jpg) no-repeat currentColor;
+			color: white;
+			text-align: center;
+			text-shadow: gray 3px 2px;
+		}
+		header h1{
+			height: 150px;
+			line-height: 150px;
+			margin: 0 auto;
+			padding: 10px;
+			font-size: 1.8em;
+			letter-spacing: 0.2em;
+		}
+		header h1 span{
+			font-size: 0.5em;
+		}
+		section{
+			display: flex;
+		}
+		section article{
+			font-family: 'ciclefina' , '黑体';
+			border: 1px solid black;
+			padding: 5px;
+			text-align: justify;
+			line-height: 1.5em;
+			color: rgb(0, 40, 0);
+			background-color: rgb(200, 200, 200);
+		}
+		article#help{
+			flex: 1;
+			position: relative;
+			overflow: hidden;
+		}
+		article#help p#textInfo{
+			position: absolute;
+			color: black;
+			font-family: 'Arial';
+			line-height: 200%;
+			font-size: 1.3em;
+			text-indent: 2em;
+			left: 0.2em;
+			top: 20%;
+			text-shadow: gray 2px 1pz;
+			z-index: 2;
+			padding: 1%;
+			margin: 5%;
+		}
+		article#help div#backPic{
+			position: absolute;
+			width: 98%;
+			height: 98%;
+			left: 1%;
+			top: 1%;
+			z-index: 1;
+			text-align: center;
+		}
+		article#help div#backPic img{
+			margin-top: 1em;
+			width: 90%;
+			height: 90%;
+		}
+		article#word{
+			flex: 2;
+			text-align: center;
+			cursor: pointer;
+		}
+		article#word nav{
+			height: 2em;
+			margin: 1.5em;
+		}
+		article#word nav span{
+			font-size: 1.3em;
+			border: 3px outset  ;
+			background-color: rgb(0, 50, 0);
+			border-radius: 15%;
+			padding: 0.2em;
+			color: white;
+			cursor: pointer;
+			margin: 1em 1em;
+		}
+		article#word nav span:hover{
+			background-color: rgb(0,75, 0);
+		}
+		article#word input#en{
+			width: 80%;
+			font-family: 'zantroke';
+			color: rgb(200, 0, 0);
+			font-size: 2.2em;
+			text-align: center;
+			border-radius: 20px;
+			outline: none;
+		}
+		article#word button{
+			position: absolute;
+			top: 9.8em;
+			height: 2.7em;
+			font-family: 'Arial';
+			font-size: 1.2em;
+			margin-left: 0.5em;
+			border-radius: 20px;
+		}
+		article#word p#pn{
+	 		font-family:'Arial','ciclefina';
+	 		color:rgb(0,150,0);
+	 		font-size:2.5em;
+	 		margin:1em auto;
+			}
+		article#word p#cn{
+	 		font-family:'ciclefina', '黑体';
+	 		font-size:1.5em;
+	 		color:rgb(150,0,0);
+	 		margin:1em auto;
+	 		width: 80%;
+	 		height: 40%;
+	 		overflow: auto;
+		}
+		footer{
+			font-family: 'zantroke','Arial';
+			background-color: rgb(0, 30, 0);
+			color: white;
+			font-size: 1.3em;
+			text-align: center;
+			height: 70px;
+			line-height: 70px;
+		}
+	}
+	</style>
+	<script src="Words.js"></script>
+	<script src="20192971.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Words Learning App <span>（大学英语6级）</span></h1>
+	</header>
+	<section>
+		<article id="help">
+			<p id="textInfo">
+				 Photo from the movie of "Pride And Prejudice ",请选择上面状态按钮，进入相应学习单词的模式。
+			</p>
+			<div id="backPic"></div>
+		</article>
+		<article id="word">
+			<nav>
+				<span id="read">读一读</span>
+				<span id="search">搜一搜</span>
+    			<span id="write">写一写</span>
+    			<span id="wordlist">单词表</span>
+			</nav>
+			<input id="en" type="text" value="ability">
+			<button>提交</button>
+			<p id="pn">/ ə'biliti /</p>
+			<p id="cn">n.能力；本领；才能，才干；专门技能，天资</p>
+		</article>
+	</section>
+	<footer>
+		Code By 20192971王良银 of 19计算机一班 on 2021.12.07 当前时间：
+	</footer>
+</body>
+</html>
