@@ -172,7 +172,7 @@ window.onload=function(){
 	var myImages = [] ;
 	for (var i=1; i<4; i++ ){
 		var img = new Image();
-		img.src ="/re/" + i + ".jpg" ;
+		img.src ="res/re/" + i + ".jpg" ;
 		myImages.push(img) ;
 	}
 	Model.myImages = myImages;
